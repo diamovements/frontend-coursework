@@ -1,0 +1,377 @@
+@import url(footer.css);
+@import url(header.css);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(#d36060, #c2ab8c) no-repeat fixed;
+}
+.title {
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.title h1 {
+    font-family: 'Dela Gothic One', sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.about {
+    display: inline-flex;
+    align-items: center;
+    position: center;
+    justify-content: center;
+}
+.about h1 {
+    font-size: 40px;
+    color: #86191d;
+    font-weight: 600;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.about img {
+    width: 520px;
+    height: 450px;
+    border-radius: 10px;
+}
+.text {
+    width: 50%;
+    padding-left: 20px;
+    font-family: 'Dela Gothic One', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1140px;
+    padding-top: 100px;
+    align-content: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-weight: 500;
+    opacity: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+
+.wrapper{
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.wrapper i{
+    font-size: 30px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+}
+
+.wrapper i:first-child{
+    left: 0;
+    position: absolute;
+}
+
+.wrapper i:last-child{
+    right: 0;
+    position: absolute;
+}
+
+.wrapper .feed{
+    display: grid;
+    gap: 16px;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.feed::-webkit-scrollbar{
+    display: none;
+}
+
+
+#right {
+    right: -45px;
+}
+#left {
+    left: -45px;
+}
+
+.feed :where(.one, .img){
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.feed.no-transcription{
+    scroll-behavior: auto;
+}
+
+.feed.dragging{
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+.feed.dragging .one{
+    cursor: grab;
+    user-select: none;
+}
+.feed .one{
+    scroll-snap-align: start;
+    list-style: none;
+    background: #86191d;
+    height: 550px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.one .img{
+    align-items: center;
+}
+
+.one .img img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.one h2{
+    margin: 25px 0 20px;
+    line-height: 5px;
+    font-size: 25px;
+    font-family: 'Dela Gothic One', sans-serif;
+    text-align: center;
+    color: white;
+    border-bottom: 0.5px solid white;
+}
+
+
+.one span{
+    width: 100%;
+    color: #ad9073;
+    line-height: 16px;
+    font-size: 16px;
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.frame iframe {
+    border-radius: 10px;
+}
+
+.frame h1 {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 50px;
+    color: #FFFFFF;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.frame p {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 20px;
+    color: #652323;
+}
+
+@media (max-width: 1280px) {
+
+    body {
+        width: 100%;
+    }
+
+    .container{
+        padding-top: 80px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about {
+        justify-content: center;
+    }
+    .about .text {
+        font-size: 20px;
+        text-align: center;
+        justify-content: center;
+        display: inline-block;
+    }
+
+    .about h1 {
+        font-size: 30px;
+        text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+    .about img {
+        width: 520px;
+        height: 450px;
+        justify-content: center;
+    }
+
+
+    h1{
+        font-size: 5vw;
+        line-height: 5vw;
+        margin-bottom: 15px;
+        margin-top: 20px;
+        margin-left: 0;
+        text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    .wrapper{
+        max-width: 90vw;
+
+    }
+    .wrapper .feed{
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+
+    .wrapper i {
+        position: absolute;
+    }
+
+
+    .feed .one{
+        height: 65vw;
+    }
+    .one .img img{
+        width: 40vw;
+        height: 50vw;
+        object-fit: cover;
+    }
+
+    .one h2{
+        margin: 4vw 0 3vw;
+        line-height: 0.3vw;
+        font-size: 3vw;
+        padding-left: 2vw;
+    }
+    .one span{
+        line-height: 2.2vw;
+        font-size: 2.2vw;
+        padding-left: 2vw;
+    }
+
+}
+
+@media (max-width: 769px) {
+
+    body {
+        width: 100%;
+    }
+
+    .container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about {
+        display: block;
+        justify-content: center;
+    }
+    .about .text {
+        font-size: 25px;
+        text-align: center;
+        justify-content: center;
+        display: inline-block;
+    }
+
+    .about h1 {
+        font-size: 30px;
+        text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+    .about img {
+        width: 100%;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 9vw;
+        line-height: 9vw;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    }
+
+    #right {
+        right: -20px;
+    }
+    #left {
+        left: -20px;
+    }
+
+    .wrapper .feed {
+        grid-auto-columns: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+
+
+    .feed {
+        max-width: 74vw;
+    }
+
+
+    .feed .one {
+        width: 74vw;
+        height: 125vw;
+
+    }
+
+    .one .img img {
+        width: 74vw;
+        height: 100vw;
+        object-fit: cover;
+    }
+
+    .one h2 {
+        margin: 6vw 0 5vw;
+        font-size: 5vw;
+        padding-left: 5vw;
+    }
+    .one span {
+        line-height: 5vw;
+        font-size: 5vw;
+        padding-left: 5vw;
+    }
+
+    .frame iframe {
+        width: 80%;
+        height: 50%;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+

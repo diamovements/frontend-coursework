@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jura:wght@600&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Jura:wght@600&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial - scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="/fav.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/fav.ico" type="im  age/x-icon">
+
+    <script src="https://kit.fontawesome.com/53a4ab4f98.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="jvs/burger.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <div class="header-body">
+                <img class="header-logo" src="pics/logo.PNG">
+                <div class="header-burger">
+                    <span></span>
+                </div>
+                <nav class="header-menu">
+                    <ul class="header-list">
+                        <li><a class="header-link" href="articles.html">Блог</a></li>
+                        <li><a class="header-link" href="feedback.html">Отзывы</a></li>
+                        <li><a class="header-link" href="contacts.html">О нас</a></li>
+                        <li><a class="header-link" href="trends.html">Тренды</a></li>
+                        <li><a class="header-link" href="main.html">Главная</a></li>
+                        <li><a class="header-link" href="tel:+74951234455">+7(495)990-11-11</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="title">
+            <h1>The Lovers Club.</h1>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item grid-item__about">
+                <p>Добро пожаловать в наш журнал моды - вашему гиду в мире стиля, элегантности и творчества! Здесь мы предлагаем вам самые актуальные и интересные тренды моды, эксклюзивные интервью с известными дизайнерами, а также полезные советы и рекомендации по созданию неповторимого образа. Наша миссия - вдохновить вас на эксперименты с модой, помочь раскрыть вашу индивидуальность и научиться выражать себя через стиль. Приготовьтесь погрузиться в мир красоты и элегантности, где каждая страница будет открывать для вас новые возможности для самовыражения и творчества. </p>
+            </div>
+            <div class="grid-item grid-item__image1">
+                <img src="pics/red_outfit.jpg">
+            </div>
+
+            <div class="grid-item grid-item__image2">
+                <img src="pics/versace.jpg">
+            </div>
+            <div class="grid-item grid-item__clothes">
+                <img src="pics/girls_dont_cry.jpg">
+                <span>ANNOUNCEMENTS</span>
+                <p>Подпишитесь на рассылку, чтобы всегда быть в курсе новых статей, обзоров и видео от нашего журнала!</p>
+                <button class="bear-button">Subscribe</button>
+            </div>
+            <div class="grid-item grid-item__catalog">
+                <img src="pics/her_vibe_pretty.jpg">
+                <p>Узнайте все о последних трендах в сфере макияжа, ухода за собой, брендов и мировой моды</p>
+            </div>
+        </div>
+        <section>
+<!--            <button class="show-modal">FEEDBACK</button>-->
+            <a class="ss" href="#">
+                <div class="phone">
+                    <img src="pics/phone.png">
+                </div>
+            </a>
+
+            <span class="overlay"></span>
+            <div class="modal-box">
+                <i class="fa-regular fa-comment-dots"></i>
+                <h2>Оставьте отзыв!</h2>
+                <div class="form-element">
+                    <label for="name">Никнейм</label>
+                    <input type="text" id="name" placeholder="Ваш ник в соцсети">
+                </div>
+                <div class="form-element">
+                    <label for="email">Почта</label>
+                    <input type="text" id="email" placeholder="Ваша почта">
+                </div>
+                <div class="form-element">
+                    <textarea placeholder="Ваш отзыв"></textarea>
+                </div>
+                <div class="buttons">
+                    <button class="close-btn">Отправить</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            const section = document.querySelector("section"),
+                overlay = document.querySelector(".overlay"),
+                showBtn = document.querySelector(".ss"),
+                closeBtn = document.querySelector(".close-btn");
+            showBtn.addEventListener("click", () => section.classList.add("active"));
+            overlay.addEventListener("click", () =>
+                section.classList.remove("active")
+            );
+            closeBtn.addEventListener("click", () =>
+                section.classList.remove("active")
+            );
+        </script>
+        <div class="cards">
+            <div class="card">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                    <h2>01</h2>
+                    <h3>Lottery</h3>
+                    <p>Испытайте свою фортуну и выиграйте билет в Париж</p>
+                    <a href="#">Участвовать</a>
+                </div>
+            </div>
+            <div class="card">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                    <h2>02</h2>
+                    <h3>Blog</h3>
+                    <p>Читайте наш блог и предлагайте свои идеи</p>
+                    <a href="articles.html">Читать</a>
+                </div>
+            </div>
+            <div class="card">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <div class="content">
+                    <h2>03</h2>
+                    <h3>Feedback</h3>
+                    <p>Отзывы наших читателей. Присоединитесь к ним!</p>
+                    <a href="feedback.html">Присоединиться</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <div id="about_block">
+            <h2 class="block_header">О сайте</h2>
+            <p>
+                В нашем журнале самые популярные на сегодняшний день бренды, одежда и стиль.
+            </p>
+        </div>
+
+        <div id="social_networks_block">
+            <h2 class="block_header">Социальные сети</h2>
+            <div id="soc_network_holder">
+                <a id="vk" href="https://vk.com/" aria-label="ВКонтакте">
+                    <i class="icon fa-brands fa-vk"></i>
+                </a>
+                <a id="linkedin" href="https://www.linkedin.com/" aria-label="LinkedIn">
+                    <i class="icon fa-brands fa-linkedin-in"></i>
+                </a>
+                <a id="twitter" href="https://twitter.com/" aria-label="Twitter">
+                    <i class="icon fa-brands fa-twitter"></i>
+                </a>
+                <a id="telegram" href="https://telegram.com/" aria-label="Telegram">
+                    <i class="icon fa-brands fa-telegram"></i>
+                </a>
+            </div>
+        </div>
+
+        <div id="map_block">
+            <h2 class="block_header">Карта сайта</h2>
+            <a href="#">Главная страница</a>
+            <a href="#">Регистрация</a>
+            <a href="#">Вход</a>
+            <h3>Список</h3>
+            <ul>
+                <li><a href="#">Тренды</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Отзывы</a></li>
+            </ul>
+        </div>
+
+        <address>
+            <h2 class="block_header">Контакты</h2>
+            <a href="mailto:theloversclub@mail.ru?subject=Сообщение+с+сайта&body=Текст+сообщения">
+                <i class="fa-solid fa-envelope"></i>theloversclub@mail.ru</a>
+            <br>
+            <a href="tel:+79161234567">
+                <i class="fa-solid fa-phone"></i>+7 (916) 123-45-67</a>
+
+        </address>
+
+        <p id="copyright" class="footer_author_text">
+            Copyright 2023 The Lovers Club. All Rights Reserved.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,486 @@
+@import url(footer.css);
+@import url(header.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(#d36060, #c2ab8c) no-repeat fixed;
+}
+.title {
+    text-align: center;
+    position: relative;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.title h1 {
+    font-family: 'Dela Gothic One', sans-serif;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 500;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.logo {
+    z-index: 0;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.logo img {
+    height: 200px;
+    width: 240px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-flow: row dense;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.grid-item {
+    display: flex;
+    background: #86191d;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+.grid-item img {
+    width: 100%;
+}
+
+.grid-item__title {
+    padding: 20px;
+    grid-column: span 3;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+}
+
+.letter {
+    line-height: 0.8;
+    font-family: 'Russo One', sans-serif;
+    font-size: 9vw;
+    font-weight: 900;
+    color: white;
+    transform-origin: bottom;
+    transition: transform 0.2s ease-in;
+}
+
+
+.grid-item__image1 {
+    padding: 0;
+}
+
+.grid-item__image2 {
+    grid-column: span 2;
+    padding: 0;
+}
+
+.grid-item__about {
+    font-size: calc(14px + 0.5vw);
+    font-weight: 300;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.grid-item__clothes,
+.grid-item__catalog {
+    flex-flow: column;
+    font-size: calc(14px + 0.5vw);
+    font-weight: 300;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.grid-item__clothes img {
+    width: 70%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.grid-item__clothes span {
+    font-size: calc(20px + 1.2vw);
+    font-weight: 900;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.grid-item__clothes button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: calc(14px + 0.1vw);
+    font-weight: 700;
+    color: black;
+}
+
+.grid-item__clothes button:hover {
+    background: #bcb5c7;
+    color: white;
+    transition: 0.5s;
+}
+
+.grid-item__catalog {
+    padding: 0;
+}
+.grid-item__catalog p {
+    margin: 40px;
+}
+
+@keyframes scroll {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-flow: row dense;
+        gap: 10px;
+        padding: 10px;
+    }
+    .grid-item__title {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 767px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-auto-flow: row dense;
+        gap: 10px;
+        padding: 10px;
+    }
+    .grid-item__title {
+        grid-column: span 1;
+    }
+    .grid-item__image2 {
+        grid-column: span 1;
+    }
+    .grid-item__buyline {
+        grid-column: span 1;
+    }
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+
+
+.cards .card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #b00f0f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+.cards:hover .card {
+    opacity: 0.3;
+    transition: 0.5s;
+}
+.cards .card:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+.cards .card::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.cards .card .content {
+    padding: 30px;
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.cards .card .content h2 {
+    position: absolute;
+    font-family: 'Dela Gothic One', cursive;
+    left: 30px;
+    top:35px;
+    font-size: 4em;
+    font-weight: 800;
+    color: #FFFFFF;
+    z-index: 1;
+    opacity: 0.1;
+    transition: 0.5s;
+}
+.cards .card:hover .content h2 {
+    opacity: 1;
+    transform: translateY(-45px);
+}
+
+.cards .card .content h3 {
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'Dela Gothic One', cursive;
+    color: white;
+    z-index: 2;
+    opacity: 0.5;
+    transition: 0.5s;
+
+}
+
+.cards .card .content p {
+    position: relative;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    z-index: 2;
+    font-weight: 300;
+    opacity: 0.5;
+    transition: 0.5s;
+
+}
+.cards .card:hover .content h3,
+.cards .card:hover .content p{
+    opacity: 1;
+}
+.cards .card .content a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+
+.cards .card span {
+    transition: 0.5s;
+    opacity: 0;
+}
+.cards .card:hover span {
+    opacity: 1;
+}
+.cards .card span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, white);
+    animation: animate1 2s linear infinite;
+}
+@keyframes animate1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.cards .card span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, white);
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.cards .card span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, transparent, white);
+    animation: animate3 2s linear infinite;
+}
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.cards .card span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to top, transparent, #ffffff);
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+
+section {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #e3f2fd;
+    font-family: 'Dela Gothic One', sans-serif;
+    z-index: 20;
+}
+button {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    padding: 14px 22px;
+    border: none;
+    background: #86191d;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #340406;
+}
+
+.modal-box {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Dela Gothic One', sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+}
+section.active .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 24px;
+    background-color: #fff;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+section.active .modal-box {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+.modal-box i {
+    font-size: 70px;
+    color: #86191d;
+}
+
+.modal-box .form-element {
+    margin: 15px 0px;
+}
+
+.modal-box .form-element label, textarea {
+    font-size: 14px;
+    font-family: 'Dela Gothic One', sans-serif;
+    color: #86191d;
+}
+
+.modal-box .form-element input[type="text"], textarea {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modal-box h2 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+}
+.modal-box h3 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
+.modal-box .buttons {
+    margin-top: 25px;
+}
+.modal-box button {
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 0 10px;
+    font-family: 'Dela Gothic One', sans-serif;
+}
+
+section a .phone img{
+    position: fixed;
+    z-index: 3;
+    right: 0;
+    bottom: 0;
+    background-color: #652323;
+    border-radius: 49px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

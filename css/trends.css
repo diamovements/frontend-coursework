@@ -1,0 +1,393 @@
+@import url(footer.css);
+@import url(header.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: radial-gradient(#d36060, #c2ab8c) no-repeat fixed;
+}
+
+.container-first {
+    display: flex;
+    font-family: 'Dela Gothic One', sans-serif;
+    margin-top: 100px;
+}
+
+.container-first .maneken {
+    display: block;
+}
+.container-first .maneken p {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    padding: 20px;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.2);
+    text-align: center;
+}
+.container-first .maneken p:hover {
+    letter-spacing: 1px;
+    color: #b00f0f;
+    transition: 0.5s ease-in-out;
+}
+
+.container-first .maneken img {
+    justify-content: center;
+    display: flex;
+    width: 600px;
+}
+.container-first .maneken img:hover {
+    transform: scale(1.03);
+    transition: .5s ease-in-out;
+    filter: saturate(110%) brightness(120%);
+}
+
+.container-first .products {
+    display: block;
+}
+
+.container-first .products p {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    padding: 20px;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.2);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.container-first .products p:hover {
+    letter-spacing: 1px;
+    color: #b00f0f;
+    transition: 0.5s ease-in-out;
+}
+
+.container-first .products .items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.container-first .products .item1, .item2, .item3, .item4 {
+    width: calc(50% - 10px);
+}
+
+.container-first .products .item1 img, .item2 img, .item3 img, .item4 img {
+    display: block;
+    margin: 0 auto;
+}
+
+.container-first .products .item1 img:hover {
+    transform: scale(1.03);
+    transition: .5s ease-in-out;
+    filter: saturate(110%) brightness(120%);
+}
+.container-first .products .item2 img:hover {
+    transform: scale(1.03);
+    transition: .5s ease-in-out;
+    filter: saturate(110%) brightness(120%);
+}
+.container-first .products .item3 img:hover {
+    transform: scale(1.03);
+    transition: .5s ease-in-out;
+    filter: saturate(110%) brightness(120%);
+}
+.container-first .products .item4 img:hover {
+    transform: scale(1.03);
+    transition: .5s ease-in-out;
+    filter: saturate(110%) brightness(120%);
+}
+
+.container-first .products .item1 span, .item2 span, .item3 span, .item4 span {
+    display: block;
+}
+.container-first .products .item1 img{
+    height: 40%;
+    width: 85%;
+}
+.container-first .products .item2 img{
+    height: 40%;
+    width: 85%;
+}
+
+.container-first .products .item3 img{
+    height: 40%;
+    width: 85%;
+}
+.container-first .products .item4 img{
+    height: 40%;
+    width: 85%;
+}
+.container-first .products .items span {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.2);
+}
+
+.container-first .products .items .item1 span:hover {
+    color: #b00f0f;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+.container-first .products .items .item2 span:hover {
+    color: #b00f0f;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+.container-first .products .items .item3 span:hover {
+    color: #b00f0f;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+.container-first .products .items .item4 span:hover {
+    color: #b00f0f;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in-out;
+}
+
+
+
+.name-cont {
+    padding: 20px;
+    margin-top: 100px;
+    background-color: #86191d;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Dela Gothic One', sans-serif;
+    color: #FFFFFF;
+}
+
+
+::selection{
+    color: #fff;
+    background: #d43f8d;
+}
+
+.sector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: center;
+}
+.container{
+    font-family: 'Dela Gothic One', sans-serif;
+    width: 400px;
+    background: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+    margin-top: 60px;
+}
+.container header{
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+.container .form-outer{
+    width: 100%;
+    overflow: hidden;
+}
+.container .form-outer form{
+    display: flex;
+    width: 400%;
+}
+.form-outer form .page{
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+.form-outer form .page .title{
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+.form-outer form .page .field{
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+form .page .field .label{
+    position: absolute;
+    top: -30px;
+    font-weight: 500;
+}
+form .page .field input{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 18px;
+}
+form .page .field select{
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+form .page .field button{
+    width: 100%;
+    height: calc(100% + 5px);
+    border: none;
+    background: #b00f0f;
+    margin-top: -20px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+form .page .field button:hover{
+    background: #000;
+}
+form .page .btns button{
+    margin-top: -20px!important;
+}
+form .page .btns button.prev{
+    margin-right: 3px;
+    font-size: 17px;
+}
+form .page .btns button.next{
+    margin-left: 3px;
+}
+.container .progress-bar{
+    display: flex;
+    margin: 40px 0;
+    user-select: none;
+}
+.container .progress-bar .step{
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.container .progress-bar .step p{
+    font-weight: 500;
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 8px;
+}
+.progress-bar .step .bullet{
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+.progress-bar .step .bullet.active{
+    border-color: #b00f0f;
+    background: #b00f0f;
+}
+.progress-bar .step .bullet span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.progress-bar .step .bullet.active span{
+    display: none;
+}
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after{
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #262626;
+}
+.progress-bar .step .bullet.active:after{
+    background: #b00f0f;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+@keyframes animate {
+    100%{
+        transform: scaleX(1);
+    }
+}
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after{
+    display: none;
+}
+.progress-bar .step p.active{
+    color: #b00f0f;
+    transition: 0.2s linear;
+}
+.progress-bar .step .check{
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.progress-bar .step .check.active{
+    display: block;
+    color: #fff;
+}
+
+@media (max-width: 1100px) {
+    .container-first {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+
+
+    .maneken {
+        margin-bottom: 20px;
+    }
+
+    .maneken img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .products {
+        width: 100%;
+    }
+
+    .items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+    }
+
+    .item1,
+    .item2,
+    .item3,
+    .item4 {
+        text-align: center;
+    }
+
+    .item1 img,
+    .item2 img,
+    .item3 img,
+    .item4 img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+

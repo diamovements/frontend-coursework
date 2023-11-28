@@ -1,0 +1,168 @@
+@import url(footer.css);
+@import url(header.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(#d36060, #c2ab8c) no-repeat fixed;
+}
+
+
+
+.container {
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.container .heading {
+    font-family: 'Dela Gothic One', sans-serif;
+    color: white;
+    text-align: center;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 40px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.container .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    justify-items: center;
+}
+.container .box-container .box {
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #b00f0f;
+    text-align: center;
+    padding: 30px 20px;
+    display: block;
+}
+
+.container .text {
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    border-left: 3px solid white;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+.container .box-container .box img {
+    height: 300px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.container .box-container .box h3 {
+    font-family: 'Dela Gothic One', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 23px;
+}
+
+.container .box-container .box p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    text-align: justify-all;
+    margin-top: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.container .box-container .box .second .btn {
+    background: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Dela Gothic One', sans-serif;
+    color:#b00f0f;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 8px;
+    display: inline-block;
+    position: relative;
+    bottom: 0;
+    right: 0;
+}
+
+.container .box-container .box .second .btn:hover {
+    background: #ad9073;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+    letter-spacing: 1px;
+}
+.container .box-container .box:hover {
+    box-shadow: 0 10px 15px rgba(0,0,0,.2);
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+.container .box-container .box .second {
+    bottom: 0;
+    height: 10%;
+
+}
+.container .box-container .box .first {
+    top: 0;
+    height: 90%;
+
+}
+
+.container .box-container .box button {
+
+    bottom: 20px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 30px;
+    background: #b00f0f;
+    top: 10px;
+    right: 10px;
+    padding-top: 10px;
+}
+
+.container .box-container .box button:hover {
+    transition: 0.2s ease-in-out;
+}
+
+
+@media (max-width: 1280px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .box-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .box-container {
+        grid-template-columns: 1fr;
+    }
+}
