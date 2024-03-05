@@ -1,4 +1,2 @@
-# Frontend Coursework
-Frontend coursework, 3 semester
-
-Topic: high fashion magazine
+# Курсовая работа по фронтенду
+Создание небольшого интернет-журнала, посвященного высокой моде
